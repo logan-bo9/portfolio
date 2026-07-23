@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logan Böttger | Maschinenbau Portfolio</title>
+  <meta name="description" content="Portfolio von Logan Böttger - Bewerbung um einen dualen Studienplatz im Maschinenbau." />
+  
+  <!-- Tailwind CSS CDN for Utility Classes -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#0023ff',
+            'primary-dark': '#001fcc',
+            'primary-light': '#3352ff',
+            'surface': '#f8f9fc',
+          },
+          fontFamily: {
+            'display': ['Inter', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Relative CSS stylesheet for GitHub Pages -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body class="bg-white text-primary font-display antialiased overflow-x-hidden">
+
+  <!-- Intro Screen / Loading Animation -->
+  <div id="intro-screen">
+    <div class="intro-logo">LB.</div>
+    <div class="intro-sub font-mono">Duales Studium Maschinenbau</div>
+  </div>
+
+  <!-- Top Fixed Navigation Bar -->
+  <nav id="navbar" class="py-4">
+    <div class="container flex justify-between items-center">
+      <a href="#hero" class="font-mono text-sm font-bold tracking-tight text-primary text-decoration-none">
+        LOGAN BÖTTGER
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-8 nav-links-desktop">
+        <a href="#about" class="nav-link">Über mich</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#work" class="nav-link">Projekte</a>
+        <a href="#contact" class="nav-link">Kontakt</a>
+      </div>
+
+      <div>
+        <a href="assets/docs/lebenslauf-logan-boettger.pdf" download class="btn-primary py-2.5 px-5 text-xs">
+          <span class="material-symbols-outlined text-sm">download</span>
+          Lebenslauf
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero Section -->
+  <section id="hero" class="main-section">
+    <!-- Cursor-Reveal Canvas Container -->
+    <div id="hero-canvas-container">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+
+    <div class="container hero-content">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Hero Text & Headline -->
+        <div class="lg:col-span-7 flex flex-col justify-center gap-6 z-10">
+          <div>
+            <p class="text-label text-primary/70 mb-3 tracking-[0.25em]">
+              Angehender Maschinenbau-Student
+            </p>
+            <h1 class="text-hero text-primary">
+              LOGAN<br />BÖTTGER
+            </h1>
+          </div>
+
+          <div class="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-4 border-t border-primary/20">
+            <div>
+              <p class="font-display font-extrabold text-xl sm:text-2xl uppercase tracking-tight text-primary leading-tight">
+                Pure Theory. Raw Practice.
+              </p>
+            </div>
+            <div>
+              <a href="#work" class="btn-primary group">
+                Projekte ansehen
+                <span class="material-symbols-outlined transition-transform group-hover:translate-y-1">arrow_downward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Image (Seamless Blend & Rounded) -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end items-center z-10 my-4 lg:my-0">
+          <div class="portrait-container">
+            <div class="portrait-glow"></div>
+            <div class="portrait-wrapper">
+              <img id="hero-portrait" src="./assets/images/portrait.jpg" alt="Logan Böttger - Angehender Maschinenbau-Student" class="portrait-img" />
+            </div>
+            <div class="portrait-badge">
+              <span class="text-label text-primary font-bold block">LOGAN BÖTTGER</span>
+              <span class="text-xs text-primary/70 font-mono">Duales Studium Maschinenbau</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. "Über mich" Section -->
+  <section id="about" class="main-section">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <h2 class="text-label text-white/70 tracking-widest">(Über mich)</h2>
+        </div>
+        <div class="md:col-span-8">
+          <p class="spotify-reveal text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-snug uppercase max-w-4xl">
+            Fokussiert auf die Schnittstelle zwischen präziser Berechnung und physischer Konstruktion. Leidenschaft für nachhaltige Systeme und moderne Fertigungstechniken.
+          </p>
+          <div class="mt-8 pt-8 border-t border-white/20 grid grid-cols-1 sm:grid-cols-2 gap-6 text-white/90">
+            <div>
+              <h3 class="font-mono text-xs text-white/60 uppercase mb-2">Motivation</h3>
+              <p class="text-sm leading-relaxed">
+                Das duale Studium bietet mir die perfekte Kombination: Fundierte theoretische Grundlagen der Ingenieurwissenschaften direkt mit realer Industriepraxis zu verbinden.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-mono text-xs text-white/60 uppercase mb-2">Zielsetzung</h3>
+              <p class="text-sm leading-relaxed">
+                Aktive Mitgestaltung innovativer Baugruppen, kinematischer Simulationen und zukunftsfähiger Werkstoffkonzepte im Maschinen- und Anlagenbau.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. "Skills" Section -->
+  <section id="skills" class="main-section">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+        <div class="md:col-span-4">
+          <h2 class="text-label text-primary/70 tracking-widest">(Skills & Kompetenzen)</h2>
+        </div>
+        <div class="md:col-span-8">
+          <p class="spotify-reveal text-headline text-primary">
+            Technisches Rüstzeug für die Konstruktion von morgen.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skill Grid Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Software / CAD -->
+        <div class="skill-card">
+          <div class="flex items-center gap-3 mb-6 pb-3 border-b border-primary/10">
+            <span class="material-symbols-outlined text-primary text-2xl">computer</span>
+            <h3 class="font-mono text-sm font-bold text-primary uppercase">Software / CAD</h3>
+          </div>
+          <ul class="list-none p-0">
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>SolidWorks</strong> (3D-CAD & Baugruppen)
+            </li>
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>AutoCAD</strong> (Technische 2D-Zeichnungen)
+            </li>
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>MATLAB</strong> (Mathematische Analysen)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Praxis -->
+        <div class="skill-card">
+          <div class="flex items-center gap-3 mb-6 pb-3 border-b border-primary/10">
+            <span class="material-symbols-outlined text-primary text-2xl">precision_manufacturing</span>
+            <h3 class="font-mono text-sm font-bold text-primary uppercase">Praxiserfahrung</h3>
+          </div>
+          <ul class="list-none p-0">
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>CNC-Fräsen</strong> & spanende Fertigung
+            </li>
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>3D-Druck</strong> (FDM & SLA Prototyping)
+            </li>
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>Werkstoffprüfung</strong> & Qualitätskontrolle
+            </li>
+          </ul>
+        </div>
+
+        <!-- Softskills -->
+        <div class="skill-card">
+          <div class="flex items-center gap-3 mb-6 pb-3 border-b border-primary/10">
+            <span class="material-symbols-outlined text-primary text-2xl">psychology</span>
+            <h3 class="font-mono text-sm font-bold text-primary uppercase">Softskills</h3>
+          </div>
+          <ul class="list-none p-0">
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>Analytisches Denken</strong> & Physikverständnis
+            </li>
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>Kommunikation</strong> in interdisziplinären Teams
+            </li>
+            <li class="skill-list-item">
+              <span class="skill-dot"></span>
+              <strong>Strukturierte Problemlösung</strong>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. "Projekte" Section -->
+  <section id="work" class="main-section">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-label text-white/70 tracking-[0.4em] uppercase">(Projekte)</h2>
+        <p class="spotify-reveal text-headline text-white mt-4">
+          Ausgewählte Arbeiten & Simulationen
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-16 md:gap-24">
+        
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <img src="./assets/images/project-1.jpg" alt="Getriebe-Prototyp Konstruktion" class="project-img" />
+          </div>
+          <div class="project-details">
+            <span class="text-label text-white/60">CAD / Kinematik / 2023</span>
+            <h3 class="text-headline text-white">Getriebe-Prototyp</h3>
+            <p class="text-white/80 text-sm sm:text-base leading-relaxed">
+              Konstruktion und Simulation eines zweistufigen Stirnradgetriebes zur Optimierung der Kraftübertragung in kompakten Bauräumen.
+            </p>
+            <div class="pt-4">
+              <a href="https://github.com/loganboettger" target="_blank" rel="noopener noreferrer" class="btn-outline-white">
+                <span class="material-symbols-outlined text-base">code</span>
+                GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card reversed">
+          <div class="project-img-wrapper">
+            <img src="./assets/images/project-2.jpg" alt="FEM Strukturanalyse Leichtbaurahmen" class="project-img" />
+          </div>
+          <div class="project-details">
+            <span class="text-label text-white/60">FEM / Werkstoffe / 2024</span>
+            <h3 class="text-headline text-white">Strukturanalyse</h3>
+            <p class="text-white/80 text-sm sm:text-base leading-relaxed">
+              Finite-Elemente-Methode Analyse eines Leichtbaurahmens unter statischer Belastung zur Identifikation von Spannungsspitzen und zur Gewichtsreduktion.
+            </p>
+            <div class="pt-4">
+              <a href="https://github.com/loganboettger" target="_blank" rel="noopener noreferrer" class="btn-outline-white">
+                <span class="material-symbols-outlined text-base">code</span>
+                GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. "Kontakt" Section -->
+  <section id="contact" class="main-section">
+    <div class="container min-h-[50vh] flex flex-col justify-center">
+      <div class="text-center mb-16">
+        <span class="text-label text-primary/70 block mb-6 tracking-[0.3em]">(Kontakt & Bewerbung)</span>
+        <a href="mailto:student@loganboettger.de" class="contact-cta-link">
+          Let's Talk
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-primary/20">
+        <div class="flex flex-col gap-2">
+          <span class="text-label text-primary/60">(E-Mail)</span>
+          <a href="mailto:student@loganboettger.de" class="nav-link text-base text-primary font-bold w-fit">
+            student@loganboettger.de
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <span class="text-label text-primary/60">(Netzwerk)</span>
+          <div class="flex gap-4">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="nav-link text-base text-primary">LinkedIn</a>
+            <span class="text-primary/30">/</span>
+            <a href="https://github.com/loganboettger" target="_blank" rel="noopener noreferrer" class="nav-link text-base text-primary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 md:items-end">
+          <span class="text-label text-primary/60">(Bewerbungsunterlagen)</span>
+          <a href="assets/docs/lebenslauf-logan-boettger.pdf" download class="btn-primary py-2 px-4 text-xs">
+            <span class="material-symbols-outlined text-sm">download</span>
+            Lebenslauf PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container flex flex-col gap-12">
+      <div class="footer-logo">LB.</div>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pt-8 border-t border-white/15">
+        <p class="text-white/70 font-mono text-xs uppercase">
+          © 2024 LOGAN BÖTTGER | DUALES STUDIUM MASCHINENBAU PORTFOLIO
+        </p>
+        <div class="flex gap-6">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-white/70">LinkedIn</a>
+          <a href="https://github.com/loganboettger" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-white/70">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modular Scripts -->
+  <script src="./assets/js/cursor-reveal.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
