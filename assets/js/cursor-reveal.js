@@ -6,9 +6,19 @@
 (function () {
   'use strict';
 
+  // Check if device supports fine pointer (mouse) and hover
+  const finePointerMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const reducedMotionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
+
   const heroSection = document.getElementById('hero');
   const canvas = document.getElementById('hero-canvas');
   if (!heroSection || !canvas) return;
+
+  // If touch device or reduced motion, completely hide canvas and do not run animation loop
+  if (!finePointerMedia.matches || reducedMotionMedia.matches) {
+    canvas.style.display = 'none';
+    return;
+  }
 
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
@@ -18,6 +28,7 @@
   let mouseX = -1000;
   let mouseY = -1000;
   let isMouseInHero = false;
+  let animationFrameId = null;
 
   const revealRadius = 60;        // Radius um den Zeiger/Maus (60px)
   const cubeSize = 22;            // Größe der isometrischen Würfel
@@ -180,7 +191,7 @@
       ctx.restore();
     }
 
-    requestAnimationFrame(render);
+    animationFrameId = requestAnimationFrame(render);
   }
 
   function updatePointerPos(clientX, clientY) {
@@ -205,22 +216,12 @@
     }
   }
 
-  // Event Listener für Maus und Touch
+  // Event Listener nur für Mausgeräte
   window.addEventListener('mousemove', function (e) {
-    updatePointerPos(e.clientX, e.clientY);
+    if (finePointerMedia.matches) {
+      updatePointerPos(e.clientX, e.clientY);
+    }
   });
-
-  window.addEventListener('touchmove', function (e) {
-    if (e.touches && e.touches.length > 0) {
-      updatePointerPos(e.touches[0].clientX, e.touches[0].clientY);
-    }
-  }, { passive: true });
-
-  window.addEventListener('touchstart', function (e) {
-    if (e.touches && e.touches.length > 0) {
-      updatePointerPos(e.touches[0].clientX, e.touches[0].clientY);
-    }
-  }, { passive: true });
 
   heroSection.addEventListener('mouseleave', function () {
     isMouseInHero = false;
