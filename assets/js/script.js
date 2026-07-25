@@ -56,10 +56,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // 3. Spotify-Style Word-by-Word Scroll Reveal
   function initSpotifyTextReveal() {
     const spotifyElements = document.querySelectorAll('.spotify-reveal');
+    const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     spotifyElements.forEach(function (el) {
       if (el.dataset.splitDone) return;
       el.dataset.splitDone = 'true';
+
+      if (isReducedMotion) {
+        // If reduced motion preferred, keep original text without word delay
+        return;
+      }
 
       const originalText = el.textContent.trim();
       const words = originalText.split(/\s+/);
@@ -69,15 +75,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const span = document.createElement('span');
         span.className = 'spotify-word';
         span.textContent = word + ' ';
-        span.style.transitionDelay = (idx * 45) + 'ms';
+        span.style.transitionDelay = (idx * 35) + 'ms';
         el.appendChild(span);
       });
     });
 
+    if (isReducedMotion) return;
+
     const observerOptions = {
       root: null,
-      rootMargin: '0px 0px -12% 0px',
-      threshold: 0.15
+      rootMargin: '0px 0px -5% 0px',
+      threshold: 0.05
     };
 
     const textObserver = new IntersectionObserver(function (entries) {
@@ -99,10 +107,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 4. Section Transitions (Scale & Fade on Scroll)
   function initSectionTransitions() {
+    const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (isReducedMotion) return;
+
     const sectionObserverOptions = {
       root: null,
-      rootMargin: '-10% 0px -10% 0px',
-      threshold: [0.1, 0.4]
+      rootMargin: '-5% 0px -5% 0px',
+      threshold: [0.05, 0.2]
     };
 
     const sectionObserver = new IntersectionObserver(function (entries) {
@@ -128,10 +139,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initSectionTransitions();
 
-  // 5. Hero Portrait Parallax Effect
+  // 5. Hero Portrait Parallax Effect (Disabled on Touch & Reduced Motion)
   const portraitImg = document.getElementById('hero-portrait');
   if (portraitImg) {
+    const finePointerMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const reducedMotionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
+
     window.addEventListener('scroll', function () {
+      if (!finePointerMedia.matches || reducedMotionMedia.matches) {
+        portraitImg.style.transform = 'none';
+        return;
+      }
       const scrolled = window.pageYOffset;
       if (scrolled < window.innerHeight) {
         portraitImg.style.transform = 'translateY(' + (scrolled * 0.18) + 'px)';
@@ -159,4 +177,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // 7. Dynamic Footer Year
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
 });
+
