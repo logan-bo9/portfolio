@@ -278,6 +278,7 @@
 
   <!-- 4. "Projekte" Section -->
   <section id="work" class="main-section">
+    <div id="projekte"></div>
     <div class="container">
       <div class="text-center mb-16">
         <h2 class="text-label text-white/70 tracking-[0.4em] uppercase">(Projekte)</h2>
@@ -297,13 +298,13 @@
             <span class="text-label text-white/60">IN ARBEIT</span>
             <h3 class="text-headline text-white">SEMINARFACHARBEIT</h3>
             <p class="text-white/80 text-sm sm:text-base leading-relaxed">
-              [THEMA DER SEMINARFACHARBEIT]
+              UNTERSUCHUNG DER SCHIFFSSTABILISIERUNG AM MODELL
             </p>
             <div class="pt-4">
-              <span class="btn-outline-white opacity-60 cursor-not-allowed inline-flex items-center gap-2" title="Projekt befindet sich in Arbeit">
-                <span class="material-symbols-outlined text-base">hourglass_empty</span>
-                IN ARBEIT
-              </span>
+              <a href="seminarfacharbeit.html" class="btn-outline-white inline-flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">description</span>
+                DETAILS ANSEHEN ↗
+              </a>
             </div>
           </div>
         </div>
@@ -311,7 +312,7 @@
         <!-- Project Card 2: Retro-Arcade-Automat -->
         <div class="project-card reversed">
           <div class="project-img-wrapper">
-            <img src="assets/images/project-2" alt="Retro-Arcade-Automat" class="project-img" onerror="this.onerror=null; this.src='./assets/images/project-2.jpg';" />
+            <img src="assets/images/projects/[arcade-bilddatei]" alt="Retro-Arcade-Automat" class="project-img" onerror="this.onerror=null; this.src='./assets/images/project-2.jpg';" />
           </div>
           <div class="project-details">
             <span class="text-label text-white/60">ESP32 / Hardware / 3D-Druck</span>
@@ -331,7 +332,7 @@
         <!-- Project Card 3: Arduino-Sensorstation -->
         <div class="project-card">
           <div class="project-img-wrapper">
-            <img src="assets/images/project-1" alt="Arduino-Sensorstation" class="project-img" onerror="this.onerror=null; this.src='./assets/images/project-1.png';" />
+            <img src="assets/images/projects/[sensorstation-bilddatei]" alt="Arduino-Sensorstation" class="project-img" onerror="this.onerror=null; this.src='./assets/images/project-1.png';" />
           </div>
           <div class="project-details">
             <span class="text-label text-white/60">Arduino / Sensorik / Hardware</span>
@@ -356,32 +357,30 @@
   <section id="contact" class="main-section">
     <div class="container min-h-[50vh] flex flex-col justify-center">
       <div class="text-center mb-16">
-        <span class="text-label text-primary/70 block mb-6 tracking-[0.3em]">(Kontakt & Bewerbung)</span>
+        <span class="text-label text-primary/70 block mb-6 tracking-[0.3em]">(KONTAKT)</span>
         <a href="mailto:student@loganboettger.de" class="contact-cta-link">
-          Let's Talk
+          LET'S TALK
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-primary/20">
         <div class="flex flex-col gap-2">
-          <span class="text-label text-primary/60">(E-Mail)</span>
+          <span class="text-label text-primary/60">(E-MAIL)</span>
           <a href="mailto:student@loganboettger.de" class="nav-link text-base text-primary font-bold w-fit">
             student@loganboettger.de
           </a>
         </div>
 
         <div class="flex flex-col gap-2">
-          <span class="text-label text-primary/60">(Netzwerk)</span>
-          <div class="flex gap-4">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="nav-link text-base text-primary">LinkedIn</a>
-            <span class="text-primary/30">/</span>
-            <a href="https://github.com/loganboettger" target="_blank" rel="noopener noreferrer" class="nav-link text-base text-primary">GitHub</a>
-          </div>
+          <span class="text-label text-primary/60">(GITHUB)</span>
+          <a href="[GITHUB_PROFIL_LINK]" target="_blank" rel="noopener noreferrer" class="nav-link text-base text-primary font-bold w-fit">
+            GITHUB ↗
+          </a>
         </div>
 
         <div class="flex flex-col gap-2 md:items-end">
-          <span class="text-label text-primary/60">(Status)</span>
-          <span class="text-base text-primary font-bold">Duales Studium Maschinenbau</span>
+          <span class="text-label text-primary/60">(STATUS)</span>
+          <span class="text-base text-primary font-bold">ANGEHENDER DUALER STUDENT</span>
         </div>
       </div>
     </div>
@@ -393,11 +392,10 @@
       <div class="footer-logo">LB.</div>
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pt-8 border-t border-white/15">
         <p class="text-white/70 font-mono text-xs uppercase">
-          © 2024 LOGAN BÖTTGER | DUALES STUDIUM MASCHINENBAU PORTFOLIO
+          © <span id="current-year">[AKTUELLES_JAHR]</span> LOGAN BÖTTGER | PORTFOLIO
         </p>
         <div class="flex gap-6">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-white/70">LinkedIn</a>
-          <a href="https://github.com/loganboettger" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-white/70">GitHub</a>
+          <a href="[GITHUB_PROFIL_LINK]" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-white/70">GITHUB ↗</a>
         </div>
       </div>
     </div>
