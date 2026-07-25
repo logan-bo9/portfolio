@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seminarfacharbeit | Logan Böttger</title>
+  <meta name="description" content="Seminarfacharbeit von Logan Böttger: Untersuchung der Schiffsstabilisierung am Modell - Vergleich von Flossenstabilisierung und Gyrostabilisierung." />
+  
+  <!-- Tailwind CSS CDN for Utility Classes -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#0023ff',
+            'primary-dark': '#001fcc',
+            'primary-light': '#3352ff',
+            'surface': '#f8f9fc',
+          },
+          fontFamily: {
+            'display': ['Inter', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Relative CSS stylesheet for GitHub Pages -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body class="bg-white text-primary font-display antialiased overflow-x-hidden">
+
+  <!-- Top Fixed Navigation Bar -->
+  <nav id="navbar" class="py-4">
+    <div class="container flex justify-between items-center">
+      <a href="./index.html" class="font-mono text-sm font-bold tracking-tight text-primary text-decoration-none">
+        LOGAN BÖTTGER
+      </a>
+
+      <div>
+        <a href="./index.html#projekte" class="btn-primary group !py-2.5 !px-4 text-xs sm:text-sm">
+          <span class="material-symbols-outlined text-base transition-transform group-hover:-translate-x-1">arrow_back</span>
+          ZURÜCK ZUM PORTFOLIO
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero / Intro Section (WHITE) -->
+  <section class="pt-32 pb-16 sm:pb-24 border-b border-primary/10 bg-white text-primary">
+    <div class="container">
+      <div class="max-w-4xl">
+        <span class="text-label text-primary/70 block mb-4 tracking-[0.25em] font-mono uppercase">
+          SEMINARFACHARBEIT · IN ARBEIT
+        </span>
+
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-primary uppercase tracking-tight leading-[1.08] mb-6">
+          UNTERSUCHUNG DER<br />
+          SCHIFFSSTABILISIERUNG<br />
+          AM MODELL
+        </h1>
+
+        <p class="font-mono text-base sm:text-lg md:text-xl font-bold text-primary/90 uppercase tracking-tight mb-6">
+          VERGLEICH VON FLOSSENSTABILISIERUNG<br class="hidden sm:inline" />
+          UND GYROSTABILISIERUNG
+        </p>
+
+        <p class="spotify-reveal text-base sm:text-lg text-primary/80 leading-relaxed max-w-3xl mb-12">
+          Eine Seminarfacharbeit über die physikalischen Grundlagen der Schiffsstabilität und den praktischen Vergleich zweier aktiver Stabilisierungssysteme an einem Modellschiff.
+        </p>
+
+        <!-- Compact Info Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-primary/15">
+          <div class="bg-surface p-5 rounded border border-primary/10">
+            <span class="font-mono text-xs text-primary/60 uppercase tracking-widest block mb-1">THEMA</span>
+            <span class="text-sm sm:text-base font-bold text-primary block">Schiffsstabilität und technische Stabilisierung</span>
+          </div>
+
+          <div class="bg-surface p-5 rounded border border-primary/10">
+            <span class="font-mono text-xs text-primary/60 uppercase tracking-widest block mb-1">ZEITRAUM</span>
+            <span class="text-sm sm:text-base font-bold text-primary block">2026 · laufend</span>
+          </div>
+
+          <div class="bg-surface p-5 rounded border border-primary/10">
+            <span class="font-mono text-xs text-primary/60 uppercase tracking-widest block mb-1">STATUS</span>
+            <span class="text-sm sm:text-base font-bold text-primary inline-flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+              In Arbeit
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Worum geht es? (BLUE) -->
+  <section class="py-16 sm:py-24 bg-primary text-white border-b border-white/15">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <h2 class="text-label text-white/70 tracking-widest font-mono uppercase">(01) WORUM GEHT ES?</h2>
+        </div>
+        <div class="md:col-span-8 space-y-6 text-white/90 text-base sm:text-lg leading-relaxed">
+          <p class="spotify-reveal">
+            In unserer Seminarfacharbeit untersuchen wir, wie sich Schiffe unter Welleneinfluss verhalten und wie sich ihre Rollbewegung durch technische Systeme verringern lässt.
+          </p>
+          <p class="spotify-reveal">
+            Im Mittelpunkt steht ein Modellversuch im Wellenbecken. Dort vergleichen wir Flossenstabilisierung und Gyrostabilisierung unter möglichst identischen Bedingungen. So verbinden wir die physikalischen Grundlagen der Schiffsstabilität mit einem praktischen Aufbau am Modellschiff.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Unser Vorgehen (WHITE) -->
+  <section class="py-16 sm:py-24 bg-surface text-primary border-b border-primary/10">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+        <div class="md:col-span-4">
+          <h2 class="text-label text-primary/70 tracking-widest font-mono uppercase">(02) UNSER VORGEHEN</h2>
+        </div>
+        <div class="md:col-span-8">
+          <p class="spotify-reveal text-xl sm:text-2xl font-bold text-primary uppercase">
+            Schritt für Schritt von der Theorie zur praktischen Erprobung.
+          </p>
+        </div>
+      </div>
+
+      <!-- Process Steps -->
+      <div class="max-w-4xl ml-auto space-y-6">
+        <div class="p-6 bg-white rounded border border-primary/15 shadow-sm transition-transform hover:-translate-y-1">
+          <div class="font-mono text-xs text-primary/60 font-bold uppercase tracking-widest mb-2">01 · GRUNDLAGEN UND RECHERCHE</div>
+          <p class="spotify-reveal text-sm sm:text-base text-primary/90 leading-relaxed font-medium">
+            Wir erarbeiten die physikalischen Grundlagen zu Auftrieb, Schwerpunkt, Rollbewegung und Schiffsstabilität.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded border border-primary/15 shadow-sm transition-transform hover:-translate-y-1">
+          <div class="font-mono text-xs text-primary/60 font-bold uppercase tracking-widest mb-2">02 · PLANUNG DES VERSUCHSAUFBAUS</div>
+          <p class="spotify-reveal text-sm sm:text-base text-primary/90 leading-relaxed font-medium">
+            Wir entwickeln ein Modellschiff und planen den Vergleich der beiden Stabilisierungssysteme im Wellenbecken.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded border border-primary/15 shadow-sm transition-transform hover:-translate-y-1">
+          <div class="font-mono text-xs text-primary/60 font-bold uppercase tracking-widest mb-2">03 · PRAKTISCHE UNTERSUCHUNG</div>
+          <p class="spotify-reveal text-sm sm:text-base text-primary/90 leading-relaxed font-medium">
+            Wir erzeugen Wellen und Strömung, um das Rollverhalten des Modells unter kontrollierten Bedingungen zu testen.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded border border-primary/15 shadow-sm transition-transform hover:-translate-y-1">
+          <div class="font-mono text-xs text-primary/60 font-bold uppercase tracking-widest mb-2">04 · AUSWERTUNG</div>
+          <p class="spotify-reveal text-sm sm:text-base text-primary/90 leading-relaxed font-medium">
+            Wir vergleichen die Rollbewegung mit und ohne Stabilisierung und bewerten die Wirkung beider Systeme.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded border border-primary/15 shadow-sm transition-transform hover:-translate-y-1">
+          <div class="font-mono text-xs text-primary/60 font-bold uppercase tracking-widest mb-2">05 · DOKUMENTATION UND PRÄSENTATION</div>
+          <p class="spotify-reveal text-sm sm:text-base text-primary/90 leading-relaxed font-medium">
+            Wir halten Aufbau, Ergebnisse und die wichtigsten Erkenntnisse in der Seminarfacharbeit und der Präsentation fest.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Mein Anteil (BLUE) -->
+  <section class="py-16 sm:py-24 bg-primary text-white border-b border-white/15">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <h2 class="text-label text-white/70 tracking-widest font-mono uppercase">(03) MEIN ANTEIL</h2>
+        </div>
+        <div class="md:col-span-8">
+          <ul class="space-y-4 text-white/90 text-sm sm:text-base font-medium">
+            <li class="p-4 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="material-symbols-outlined text-white text-xl mt-0.5">check_circle</span>
+              <span>Mitwirkung an Planung und Struktur der Arbeit im Team</span>
+            </li>
+            <li class="p-4 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="material-symbols-outlined text-white text-xl mt-0.5">check_circle</span>
+              <span>Mitarbeit an den theoretischen Grundlagen zu Schiffsstabilität und Stabilisierungssystemen</span>
+            </li>
+            <li class="p-4 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="material-symbols-outlined text-white text-xl mt-0.5">check_circle</span>
+              <span>Verantwortung für Regeltechnik und Sensorik der Stabilisierung</span>
+            </li>
+            <li class="p-4 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="material-symbols-outlined text-white text-xl mt-0.5">check_circle</span>
+              <span>Beteiligung an der Konzeption des Modellversuchs im Wellenbecken</span>
+            </li>
+            <li class="p-4 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="material-symbols-outlined text-white text-xl mt-0.5">check_circle</span>
+              <span>Unterstützung bei Auswertung, Dokumentation und Präsentation</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Aktueller Stand (WHITE) -->
+  <section class="py-16 sm:py-24 bg-surface text-primary border-b border-primary/10">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <h2 class="text-label text-primary/70 tracking-widest font-mono uppercase">(04) AKTUELLER STAND</h2>
+        </div>
+        <div class="md:col-span-8">
+          <ul class="space-y-3 font-mono text-sm sm:text-base">
+            <li class="p-3.5 bg-white rounded border border-primary/15 flex items-center gap-3 text-primary font-semibold">
+              <span class="text-emerald-600 font-bold text-lg">✓</span>
+              <span>Thema festgelegt</span>
+            </li>
+            <li class="p-3.5 bg-white rounded border border-primary/15 flex items-center gap-3 text-primary font-semibold">
+              <span class="text-emerald-600 font-bold text-lg">✓</span>
+              <span>Grundstruktur des Theorieteils ausgearbeitet</span>
+            </li>
+            <li class="p-3.5 bg-white rounded border border-primary/15 flex items-center gap-3 text-primary font-semibold">
+              <span class="text-emerald-600 font-bold text-lg">✓</span>
+              <span>Physikalische Grundlagen, Flossenstabilisierung und Gyrostabilisierung beschrieben</span>
+            </li>
+            <li class="p-3.5 bg-white rounded border-2 border-primary flex items-center gap-3 text-primary font-bold shadow-sm">
+              <span class="text-primary font-bold text-xl">→</span>
+              <span>Praktischer Versuch und Vergleich am Modell</span>
+            </li>
+            <li class="p-3.5 bg-white/70 rounded border border-primary/10 flex items-center gap-3 text-primary/60">
+              <span class="text-primary/40 text-lg">○</span>
+              <span>Auswertung der Messergebnisse</span>
+            </li>
+            <li class="p-3.5 bg-white/70 rounded border border-primary/10 flex items-center gap-3 text-primary/60">
+              <span class="text-primary/40 text-lg">○</span>
+              <span>Endfassung und Präsentation</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Bisher gelernt (BLUE) -->
+  <section class="py-16 sm:py-24 bg-primary text-white border-b border-white/15">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <h2 class="text-label text-white/70 tracking-widest font-mono uppercase">(05) BISHER GELERNT</h2>
+        </div>
+        <div class="md:col-span-8">
+          <div class="space-y-4">
+            <div class="p-5 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="font-mono font-bold text-white text-sm mt-0.5">•</span>
+              <p class="spotify-reveal text-sm sm:text-base text-white/90 leading-relaxed font-medium">
+                Die Stabilität eines Schiffes hängt stark von Schwerpunkt, Auftrieb und Metazentrum ab.
+              </p>
+            </div>
+            <div class="p-5 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="font-mono font-bold text-white text-sm mt-0.5">•</span>
+              <p class="spotify-reveal text-sm sm:text-base text-white/90 leading-relaxed font-medium">
+                Rollbewegungen sind besonders für Sicherheit und Komfort wichtig.
+              </p>
+            </div>
+            <div class="p-5 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="font-mono font-bold text-white text-sm mt-0.5">•</span>
+              <p class="spotify-reveal text-sm sm:text-base text-white/90 leading-relaxed font-medium">
+                Konventionelle Flossenstabilisierung benötigt Wasseranströmung, während Gyrostabilisierung auch ohne Fahrt wirken kann.
+              </p>
+            </div>
+            <div class="p-5 bg-white/10 rounded border border-white/15 flex items-start gap-3">
+              <span class="font-mono font-bold text-white text-sm mt-0.5">•</span>
+              <p class="spotify-reveal text-sm sm:text-base text-white/90 leading-relaxed font-medium">
+                Für einen fairen Vergleich müssen Wellenhöhe, Strömung und weitere Randbedingungen möglichst konstant bleiben.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Abschluss / CTA (WHITE) -->
+  <section class="py-20 sm:py-28 bg-white text-primary text-center">
+    <div class="container">
+      <div class="max-w-2xl mx-auto flex flex-col items-center gap-6">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary uppercase tracking-tight leading-tight">
+          DAS PROJEKT<br />
+          LÄUFT WEITER.
+        </h2>
+        
+        <p class="text-sm sm:text-base text-primary/70 font-mono">
+          Diese Seite wird mit dem Fortschritt der Seminarfacharbeit aktualisiert.
+        </p>
+
+        <div class="pt-4">
+          <a href="./index.html#projekte" class="btn-primary group">
+            <span class="material-symbols-outlined text-base transition-transform group-hover:-translate-x-1">arrow_back</span>
+            ← ZURÜCK ZU ALLEN PROJEKTEN
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="py-12 bg-primary text-white">
+    <div class="container">
+      <div class="footer-logo">LB.</div>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pt-8 border-t border-white/15">
+        <p class="text-white/70 font-mono text-xs uppercase">
+          © <span id="current-year">[AKTUELLES_JAHR]</span> LOGAN BÖTTGER | PORTFOLIO
+        </p>
+        <div class="flex gap-6">
+          <a href="[GITHUB_PROFIL_LINK]" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-white/70">GITHUB ↗</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Relative JavaScript File for GitHub Pages -->
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
