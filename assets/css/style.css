@@ -110,7 +110,7 @@ a, button, .btn-primary, .btn-outline, .btn-outline-white, .nav-link {
 .text-hero {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 10vw, 7.5rem);
-  line-height: 0.88;
+  line-height: 1;
   letter-spacing: -0.04em;
   font-weight: 900;
   text-transform: uppercase;
